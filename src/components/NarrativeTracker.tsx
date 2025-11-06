@@ -52,7 +52,7 @@ export const NarrativeTracker: React.FC = () => {
               />
               <Bar 
                 dataKey="momentum" 
-                fill="hsl(260, 95%, 65%)"
+                fill="hsl(0, 100%, 50%)"
                 radius={[4, 4, 0, 0]}
               />
             </BarChart>
