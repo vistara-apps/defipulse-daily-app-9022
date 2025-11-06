@@ -54,7 +54,7 @@ export const ProtocolRiskScores: React.FC = () => {
             <option value="all">All Risk Levels</option>
             <option value="low">Low Risk (80+)</option>
             <option value="medium">Medium Risk (60-79)</option>
-            <option value="high">High Risk (<60)</option>
+            <option value="high">High Risk (&lt;60)</option>
           </select>
         </div>
       </div>
