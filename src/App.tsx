@@ -9,6 +9,12 @@ import { WalletOpportunities } from './components/WalletOpportunities';
 
 function App() {
   const [activeSection, setActiveSection] = useState('digest');
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  const toggleDarkMode = () => {
+    setIsDarkMode(!isDarkMode);
+    document.body.classList.toggle('dark', !isDarkMode);
+  };
 
   const renderContent = () => {
     switch (activeSection) {
@@ -49,10 +55,10 @@ function App() {
   return (
     <FrameShell>
       <div className="flex h-screen overflow-hidden">
-        <Sidebar activeSection={activeSection} onSectionChange={setActiveSection} />
+        <Sidebar activeSection={activeSection} onSectionChange={setActiveSection} toggleDarkMode={toggleDarkMode} />
         
         <div className="flex-1 flex flex-col overflow-hidden">
-          <Header activeSection={activeSection} />
+          <Header activeSection={activeSection} toggleDarkMode={toggleDarkMode} />
           
           <main className="flex-1 overflow-auto p-6">
             <div className="max-w-4xl mx-auto">

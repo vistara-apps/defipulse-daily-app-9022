@@ -13,6 +13,7 @@ import {
 interface SidebarProps {
   activeSection: string;
   onSectionChange: (section: string) => void;
+  toggleDarkMode: () => void;
 }
 
 const navigation = [
@@ -25,7 +26,7 @@ const navigation = [
   { id: 'settings', name: 'Settings', icon: Settings },
 ];
 
-export const Sidebar: React.FC<SidebarProps> = ({ activeSection, onSectionChange }) => {
+export const Sidebar: React.FC<SidebarProps> = ({ activeSection, onSectionChange, toggleDarkMode }) => {
   return (
     <div className="w-64 bg-surface border-r border-border h-full p-4">
       <div className="mb-8">
@@ -59,6 +60,9 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeSection, onSectionChange
           );
         })}
       </nav>
+      <button onClick={toggleDarkMode} className="mt-4 text-foreground">
+        Toggle Dark Mode
+      </button>
     </div>
   );
 };

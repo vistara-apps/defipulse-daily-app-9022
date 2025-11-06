@@ -3,9 +3,10 @@ import { clsx } from 'clsx';
 
 interface HeaderProps {
   activeSection: string;
+  toggleDarkMode: () => void;
 }
 
-export const Header: React.FC<HeaderProps> = ({ activeSection }) => {
+export const Header: React.FC<HeaderProps> = ({ activeSection, toggleDarkMode }) => {
   const getSectionTitle = (section: string) => {
     switch (section) {
       case 'digest': return 'Daily Digest';
@@ -36,7 +37,9 @@ export const Header: React.FC<HeaderProps> = ({ activeSection }) => {
             {activeSection === 'settings' && "Customize your experience"}
           </p>
         </div>
-        {/* Other elements */}
+        <button onClick={toggleDarkMode} className="text-foreground">
+          Toggle Dark Mode
+        </button>
       </div>
     </header>
   );
