@@ -17,7 +17,7 @@
     --bg: hsl(240, 15%, 8%);
     --text: hsl(0, 0%, 95%);
     --accent: hsl(140, 85%, 55%);
-    --primary: hsl(260, 95%, 65%);
+    --primary: hsl(0, 100%, 50%); /* Changed from blue to red */
     --surface: hsl(240, 12%, 12%);
     --risk-low: hsl(140, 70%, 50%);
     --risk-medium: hsl(45, 90%, 55%);
@@ -35,10 +35,10 @@
   }
   
   .glow {
-    box-shadow: 0 0 20px hsla(260, 95%, 65%, 0.3);
+    box-shadow: 0 0 20px hsla(0, 100%, 50%, 0.3); /* Changed from blue to red */
   }
   
   .card-glow {
-    box-shadow: 0 8px 24px hsla(260, 50%, 10%, 0.4);
+    box-shadow: 0 8px 24px hsla(0, 50%, 50%, 0.4); /* Changed from blue to red */
   }
 }
