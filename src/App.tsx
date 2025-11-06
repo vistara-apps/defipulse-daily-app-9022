@@ -23,21 +23,21 @@ function App() {
       case 'bookmarks':
         return (
           <div className="text-center py-16">
-            <h3 className="text-xl font-semibold text-foreground mb-2">Bookmarked Protocols</h3>
+            <h3 className="text-xl font-semibold text-foreground mb-2 glow">Bookmarked Protocols</h3>
             <p className="text-text-muted">Your saved protocols will appear here</p>
           </div>
         );
       case 'notifications':
         return (
           <div className="text-center py-16">
-            <h3 className="text-xl font-semibold text-foreground mb-2">Notification Center</h3>
+            <h3 className="text-xl font-semibold text-foreground mb-2 glow">Notification Center</h3>
             <p className="text-text-muted">Configure your alert preferences</p>
           </div>
         );
       case 'settings':
         return (
           <div className="text-center py-16">
-            <h3 className="text-xl font-semibold text-foreground mb-2">Settings</h3>
+            <h3 className="text-xl font-semibold text-foreground mb-2 glow">Settings</h3>
             <p className="text-text-muted">Customize your DeFiPulse experience</p>
           </div>
         );
