@@ -26,8 +26,8 @@ export const ActionButton: React.FC<ActionButtonProps> = ({
         'inline-flex items-center justify-center font-medium transition-all duration-250 rounded-md',
         {
           // Variants
-          'bg-primary text-white hover:bg-primary/90 hover:shadow-glow': variant === 'primary',
-          'border border-border text-foreground hover:border-primary/30 hover:text-primary': variant === 'secondary',
+          'bg-red-500 text-white hover:bg-red-600 hover:shadow-glow': variant === 'primary',
+          'border border-border text-foreground hover:border-red-600 hover:text-red-600': variant === 'secondary',
           'text-text-muted hover:text-foreground hover:bg-muted': variant === 'ghost',
           
           // Sizes

@@ -25,9 +25,9 @@ export const ProtocolListItem: React.FC<ProtocolListItemProps> = ({
 
   return (
     <div className={clsx(
-      'flex items-center justify-between p-4 bg-card border border-border rounded-lg hover:border-primary/30 transition-all duration-250',
+      'flex items-center justify-between p-4 bg-card border border-border rounded-lg hover:border-red-600 transition-all duration-250',
       {
-        'ring-2 ring-accent/20': variant === 'bookmarked' || isBookmarked
+        'ring-2 ring-red-500/20': variant === 'bookmarked' || isBookmarked
       }
     )}>
       <div className="flex items-center gap-3">
@@ -36,7 +36,7 @@ export const ProtocolListItem: React.FC<ProtocolListItemProps> = ({
           <div className="flex items-center gap-2">
             <h3 className="font-semibold text-foreground">{protocol.name}</h3>
             {(variant === 'bookmarked' || isBookmarked) && (
-              <Star className="w-4 h-4 text-accent fill-current" />
+              <Star className="w-4 h-4 text-red-500 fill-current" />
             )}
           </div>
           <div className="flex items-center gap-4 mt-1">
@@ -56,14 +56,14 @@ export const ProtocolListItem: React.FC<ProtocolListItemProps> = ({
             className={clsx(
               'p-2 rounded-full transition-colors',
               {
-                'text-accent hover:bg-accent/10': isBookmarked,
-                'text-text-muted hover:bg-muted hover:text-accent': !isBookmarked
+                'text-red-500 hover:bg-red-500/10': isBookmarked,
+                'text-text-muted hover:bg-muted hover:text-red-500': !isBookmarked
               }
             )}
           >
             <Star className={clsx('w-4 h-4', { 'fill-current': isBookmarked })} />
           </button>
-          <button className="p-2 rounded-full text-text-muted hover:bg-muted hover:text-primary transition-colors">
+          <button className="p-2 rounded-full text-text-muted hover:bg-muted hover:text-red-500 transition-colors">
             <ExternalLink className="w-4 h-4" />
           </button>
         </div>

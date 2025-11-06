@@ -44,9 +44,9 @@ export const DigestCard: React.FC<DigestCardProps> = ({
 
   const getCategoryColor = () => {
     switch (item.category) {
-      case 'protocol_update': return 'text-primary';
-      case 'narrative_shift': return 'text-momentum-hot';
-      case 'yield_opportunity': return 'text-accent';
+      case 'protocol_update': return 'text-red-500';
+      case 'narrative_shift': return 'text-red-500';
+      case 'yield_opportunity': return 'text-red-500';
       default: return 'text-text-muted';
     }
   };
@@ -56,7 +56,7 @@ export const DigestCard: React.FC<DigestCardProps> = ({
   return (
     <div className={clsx(
       'relative bg-card border border-border rounded-lg p-4 card-glow transition-all duration-250',
-      'hover:border-primary/30 hover:shadow-glow',
+      'hover:border-red-600 hover:shadow-glow',
       {
         'opacity-60': isBlurred,
         'max-w-sm': variant === 'shared'
@@ -66,7 +66,7 @@ export const DigestCard: React.FC<DigestCardProps> = ({
         <div className="absolute inset-0 backdrop-blur-sm bg-card/50 rounded-lg flex items-center justify-center z-10">
           <button
             onClick={onUnlock}
-            className="flex items-center gap-2 bg-primary text-white px-4 py-2 rounded-md hover:bg-primary/90 transition-colors"
+            className="flex items-center gap-2 bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600"
           >
             <Lock className="w-4 h-4" />
             Unlock Premium ($0.50)
@@ -83,7 +83,7 @@ export const DigestCard: React.FC<DigestCardProps> = ({
           </span>
         </div>
         {item.isPremium && (
-          <div className="flex items-center gap-1 bg-primary/20 text-primary px-2 py-1 rounded-full text-xs">
+          <div className="flex items-center gap-1 bg-red-500/20 text-red-500 px-2 py-1 rounded-full text-xs">
             <Lock className="w-3 h-3" />
             Premium
           </div>
@@ -108,8 +108,8 @@ export const DigestCard: React.FC<DigestCardProps> = ({
             className={clsx(
               'flex items-center gap-1 px-3 py-1 rounded-full transition-colors text-sm',
               {
-                'bg-accent/20 text-accent': isUpvoted,
-                'bg-muted text-text-muted hover:bg-accent/10 hover:text-accent': !isUpvoted
+                'bg-red-500/20 text-red-500': isUpvoted,
+                'bg-muted text-text-muted hover:bg-red-500/10 hover:text-red-500': !isUpvoted
               }
             )}
             disabled={isBlurred}
@@ -120,7 +120,7 @@ export const DigestCard: React.FC<DigestCardProps> = ({
           
           <button
             onClick={handleShare}
-            className="flex items-center gap-1 px-3 py-1 rounded-full bg-muted text-text-muted hover:bg-primary/10 hover:text-primary transition-colors text-sm"
+            className="flex items-center gap-1 px-3 py-1 rounded-full bg-muted text-text-muted hover:bg-red-500/10 hover:text-red-500 transition-colors text-sm"
             disabled={isBlurred}
           >
             <Share2 className="w-4 h-4" />

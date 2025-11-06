@@ -18,11 +18,11 @@
   :root {
     --bg: hsl(240, 15%, 8%);
     --text: hsl(0, 0%, 95%);
-    --accent: hsl(140, 85%, 55%);
+    --accent: hsl(0, 100%, 50%);
     --primary: hsl(0, 100%, 50%);
     --surface: hsl(240, 12%, 12%);
     --risk-low: hsl(140, 70%, 50%);
-    --risk-medium: hsl(45, 90%, 55%);
+    --risk-medium: hsl(0, 100%, 50%);
     --risk-high: hsl(0, 85%, 60%);
     --text-muted: hsl(0, 0%, 60%);
     --momentum-hot: hsl(25, 100%, 60%);
